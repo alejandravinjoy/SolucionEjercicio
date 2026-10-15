@@ -102,10 +102,34 @@ colnames(Animals2)
 
 d)  Usa la función intersect y almacena en la variable commonAnimals los aminales que aparezcan en ambos conjuntos
 ```{r}
-commonAnimals<-intersect(mammals,Animals2)
+commonAnimals<-intersect(rownames(mammals),rownames(Animals2))
+#para saber cuantos animales aprecen en ambos
+length(commonAnimals)
 print(commonAnimals)
+
 ```
+Como resultado tenemos 58 animales en ambos conjuntos.
 
 e)  Usa setdiff para averiguar qué animales no están en ambos conjuntos. ¿Cuántos son ?. ¿Qué tipo de animales son?
+```{r}
+#Animales que están en mammals pero no en Animals2
+NonCommonAnimals1<-setdiff(rownames(mammals),rownames(Animals2))
+#para saber cuantos animales no están en ambos conjuntos
+length(NonCommonAnimals1)
+NonCommonAnimals1
+```
+
+```{r}
+#Animales que están en Animals2 pero no en mammals
+NonCommonAnimals2<-setdiff(rownames(Animals2),rownames(mammals))
+#para saber cuantos animales no están en ambos conjuntos
+length(NonCommonAnimals2)
+NonCommonAnimals2
+```
+Si unimos ambos conjuntos tenemos lo que no se encuentran en ambos
+```{r}
+notin<-union(NonCommonAnimals1,NonCommonAnimals2)
+notin
+```
 
 f)  Determina las diferencia entre los animales que no aparecen en ambos conjuntos.
