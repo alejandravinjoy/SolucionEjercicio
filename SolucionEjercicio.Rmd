@@ -129,6 +129,8 @@ cat('Hay un total de',length(NonCommonAnimals2),'animales en Animals2 que no se 
 cat('Los nomnbres de los animales son:\n') 
 NonCommonAnimals2
 ```
+Tenemos 7 animales que se encuentran en Animals2 pero no en mammals
+
 Si unimos ambos conjuntos tenemos lo que no se encuentran en ambos
 ```{r}
 notin<-union(NonCommonAnimals1,NonCommonAnimals2)
