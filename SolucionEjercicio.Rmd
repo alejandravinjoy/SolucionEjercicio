@@ -131,10 +131,11 @@ NonCommonAnimals2
 ```
 Tenemos 7 animales que se encuentran en Animals2 pero no en mammals
 
+
+
+f)  Determina las diferencia entre los animales que no aparecen en ambos conjuntos.
 Si unimos ambos conjuntos tenemos lo que no se encuentran en ambos
 ```{r}
 notin<-union(NonCommonAnimals1,NonCommonAnimals2)
 notin
 ```
-
-f)  Determina las diferencia entre los animales que no aparecen en ambos conjuntos.
