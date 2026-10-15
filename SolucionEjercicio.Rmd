@@ -115,15 +115,18 @@ e)  Usa setdiff para averiguar qué animales no están en ambos conjuntos. ¿Cu�
 #Animales que están en mammals pero no en Animals2
 NonCommonAnimals1<-setdiff(rownames(mammals),rownames(Animals2))
 #para saber cuantos animales no están en ambos conjuntos
-length(NonCommonAnimals1)
+cat('Hay un total de',length(NonCommonAnimals1),'animales en mammals que no se encuentran en Animals2 \n')
+cat('Los nomnbres de los animales son:\n') 
 NonCommonAnimals1
 ```
+Tenemos 4 animales que se encuentran en mammals pero no en Animals2
 
 ```{r}
 #Animales que están en Animals2 pero no en mammals
 NonCommonAnimals2<-setdiff(rownames(Animals2),rownames(mammals))
 #para saber cuantos animales no están en ambos conjuntos
-length(NonCommonAnimals2)
+cat('Hay un total de',length(NonCommonAnimals2),'animales en Animals2 que no se encuentran en mammals \n')
+cat('Los nomnbres de los animales son:\n') 
 NonCommonAnimals2
 ```
 Si unimos ambos conjuntos tenemos lo que no se encuentran en ambos
